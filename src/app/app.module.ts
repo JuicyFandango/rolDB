@@ -6,13 +6,14 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { ItemList } from '../pages/item/item-list.component';
+import { ItemDetail } from '../pages/item/item-detail.component';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { ItemList } from './components/item/item-list.component';
-import { ItemDetail } from './components/item/item-detail.component';
+import { ItemProvider } from '../providers/item/item';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ItemDetail } from './components/item/item-detail.component';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ItemProvider
   ]
 })
 export class AppModule {}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ Item.name }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <h3>{{ Item.fullDesc }}</h3>
+    </ion-list-header>
+    <ion-item>
+      <h3>Tipo <ion-icon name="{{ Item.icon }}"> </ion-icon></h3>
+      <p>{{ Item.type }}</p>
+    </ion-item>    <section *ngFor="let prop of Item.props">
+      <ion-item>
+        <h3>{{ prop.name }}</h3>
+        <p>{{ prop.desc }}</p>
+      </ion-item>
+    </section>
+  </ion-list>
+</ion-content>
