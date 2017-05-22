@@ -20,7 +20,7 @@ import { ItemDetail } from './item-detail.component'
 })
 
 export class ItemList{
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public itemProvider: ItemProvider) {}
 
     Items = null;
 
@@ -29,6 +29,6 @@ export class ItemList{
   }
 
   getItems(event: string){
-    this.Items = ItemProvider.getItems();
+    this.Items = this.itemProvider.getItems();
   }
 }

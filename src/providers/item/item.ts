@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+//import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -11,7 +11,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ItemProvider {
 
-  constructor(public http: Http) {
+  //constructor(public http: Http) {
+  constructor() {
     console.log('Hello ItemProvider Provider');
   }
 
